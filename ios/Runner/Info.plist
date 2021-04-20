@@ -49,5 +49,9 @@
 
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow access to microphone</string>
+
+<key>NSCameraUsageDescription</key>
+<string>Allow access to camera</string>
+
 </dict>
 </plist>
