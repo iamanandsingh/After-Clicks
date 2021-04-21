@@ -1,10 +1,10 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-class NotificationPlugin{
+class notificationPlugin{
   FlutterLocalNotificationsPlugin localNotification;
   var initializationSettings;
 
-  NotificationPlugin._(){
+  notificationPlugin._(){
     init();
   }
 
@@ -62,4 +62,4 @@ class NotificationPlugin{
 
 }
 
-NotificationPlugin mNotificationPlugin = NotificationPlugin._();
+notificationPlugin mNotificationPlugin = notificationPlugin._();

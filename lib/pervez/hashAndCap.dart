@@ -1,25 +1,25 @@
-import 'package:after_clicks/pervez/SelectHashtags.dart';
+import 'package:after_clicks/pervez/selectHashtags.dart';
 import 'package:flutter/material.dart';
 import 'package:after_clicks/pervez/schedule.dart';
 import 'dart:io';
 
 String hashtagP = '';
 
-class HashAndCap extends StatefulWidget {
+class hashAndCap extends StatefulWidget {
 
   final File _image;
   final String _imagePath; //
-  HashAndCap(this._image, this._imagePath);
+  hashAndCap(this._image, this._imagePath);
 
   @override
-  _HashAndCapState createState() => _HashAndCapState(_image, _imagePath);
+  _hashAndCapState createState() => _hashAndCapState(_image, _imagePath);
 }
 
-class _HashAndCapState extends State<HashAndCap> {
+class _hashAndCapState extends State<hashAndCap> {
 
   File imageP;
   String _imagePathP; //
-  _HashAndCapState(this.imageP, this._imagePathP);
+  _hashAndCapState(this.imageP, this._imagePathP);
 
   DateTime dateTimeP;
   TimeOfDay timeOfDayP;
@@ -88,7 +88,7 @@ class _HashAndCapState extends State<HashAndCap> {
                   ),
                   onPressed: (){
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SelectHash()), ).then((value) => setState(() {}));
+                        MaterialPageRoute(builder: (context) => selectHash()), ).then((value) => setState(() {}));
 
                   },
                 )
@@ -146,7 +146,7 @@ class _HashAndCapState extends State<HashAndCap> {
                     dateTimeP = date;
                     if(dateTimeP != null && timeOfDayP != null){
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => ScheduleP(captionP, hashtagP,dateTimeP,timeOfDayP,imageP,_imagePathP)));
+                          MaterialPageRoute(builder: (context) => scheduleP(captionP, hashtagP,dateTimeP,timeOfDayP,imageP,_imagePathP)));
                     }
                   });
                 });

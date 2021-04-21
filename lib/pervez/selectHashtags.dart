@@ -2,24 +2,24 @@ import 'package:after_clicks/pervez/utils/hashtags.dart';
 import 'package:after_clicks/pervez/hashAndCap.dart';
 import 'package:flutter/material.dart';
 
-class SelectHash extends StatefulWidget {
+class selectHash extends StatefulWidget {
   @override
-  _SelectHashState createState() => _SelectHashState();
+  _selectHashState createState() => _selectHashState();
 }
 
-class _SelectHashState extends State<SelectHash> {
+class _selectHashState extends State<selectHash> {
 
-  List<Hashtag> hashtags = [
-    Hashtag(hashTitle: 'Love', hashList: '#love #instagood #like #follow #instagram #photooftheday #photography #beautiful #fashion #picoftheday'),
-    Hashtag(hashTitle: 'Fashion', hashList: '#fashion #love #style #instagood #like #photography #photooftheday #beautiful #follow #instagram #picoftheday'),
-    Hashtag(hashTitle: 'Nature', hashList: '#summer #likeforlikes #flowers #model #sky #wildlife #cute #mountains #adventure #followme #india #explore #outdoor'),
-    Hashtag(hashTitle: 'Travel', hashList: '#traveling #vacation #model #beach #lifestyle #life #india #sunset #beauty #holiday #italy #portrait #europe #traveller #fun'),
-    Hashtag(hashTitle: 'Selfie', hashList: '#selfies #like #me #love #myself #selfietime #selfieaddict #selfieday #selfiegamestrong #selfiegram #selfienation'),
-    Hashtag(hashTitle: 'Friends', hashList: '#friendshipgoals #friendsforever #friendsforlife #friendships #friendshipquotes #friendsnotfood #friends4ever'),
-    Hashtag(hashTitle: 'Music', hashList: '#bestmusic #musicwriter #igmusic #musicismylife #musicindustry #goodmusic #musiclife #musicmaker #singing #songwriter'),
-    Hashtag(hashTitle: 'Beach', hashList: '#sandbetweenmytoes #oceanview #beachporn #beachsunset #sunsetbeach #beachaddict #sand #ocean #beachlife #sea'),
-    Hashtag(hashTitle: 'Motivation', hashList: '#determination #instamotivation #motivationmonday #mitivation #lifemotivation #lifestyle #inspirationalquotes #quote #inspire #motivational'),
-    Hashtag(hashTitle: 'Gym', hashList: '#fitlife #fitgym #gymjunkie #workoutgym #firness #fitnesslife #fitfam #instagym #workout #tbt')
+  List<hashtag> hashtags = [
+    hashtag(hashTitle: 'Love', hashList: '#love #instagood #like #follow #instagram #photooftheday #photography #beautiful #fashion #picoftheday'),
+    hashtag(hashTitle: 'Fashion', hashList: '#fashion #love #style #instagood #like #photography #photooftheday #beautiful #follow #instagram #picoftheday'),
+    hashtag(hashTitle: 'Nature', hashList: '#summer #likeforlikes #flowers #model #sky #wildlife #cute #mountains #adventure #followme #india #explore #outdoor'),
+    hashtag(hashTitle: 'Travel', hashList: '#traveling #vacation #model #beach #lifestyle #life #india #sunset #beauty #holiday #italy #portrait #europe #traveller #fun'),
+    hashtag(hashTitle: 'Selfie', hashList: '#selfies #like #me #love #myself #selfietime #selfieaddict #selfieday #selfiegamestrong #selfiegram #selfienation'),
+    hashtag(hashTitle: 'Friends', hashList: '#friendshipgoals #friendsforever #friendsforlife #friendships #friendshipquotes #friendsnotfood #friends4ever'),
+    hashtag(hashTitle: 'Music', hashList: '#bestmusic #musicwriter #igmusic #musicismylife #musicindustry #goodmusic #musiclife #musicmaker #singing #songwriter'),
+    hashtag(hashTitle: 'Beach', hashList: '#sandbetweenmytoes #oceanview #beachporn #beachsunset #sunsetbeach #beachaddict #sand #ocean #beachlife #sea'),
+    hashtag(hashTitle: 'Motivation', hashList: '#determination #instamotivation #motivationmonday #mitivation #lifemotivation #lifestyle #inspirationalquotes #quote #inspire #motivational'),
+    hashtag(hashTitle: 'Gym', hashList: '#fitlife #fitgym #gymjunkie #workoutgym #firness #fitnesslife #fitfam #instagym #workout #tbt')
 
   ];
 
@@ -39,7 +39,7 @@ class _SelectHashState extends State<SelectHash> {
           color: Colors.black
       ),
       title: Text(
-        'hashtags',
+        'Hashtags',
         style: TextStyle(
             color: Colors.black
         ),
