@@ -1,6 +1,6 @@
-class hashtag{
+class Hashtag{
   String hashList;
   String hashTitle;
 
-  hashtag({this.hashList, this.hashTitle});
+  Hashtag({this.hashList, this.hashTitle});
 }

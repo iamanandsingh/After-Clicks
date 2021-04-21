@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:after_clicks/pervez/hashAndCap.dart';
+import 'package:after_clicks/pervez/HashAndCap.dart';
 import 'package:after_clicks/pervez/utils/notificationPlugin.dart';
 import 'package:after_clicks/pervez/utils/scheduleListManager.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +33,7 @@ class _SchedulePageState extends State<SchedulePage> {
         _imagePath = pickedFile.path; //
         _image = File(pickedFile.path);
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => hashAndCap(_image, _imagePath)));
+            MaterialPageRoute(builder: (context) => HashAndCap(_image, _imagePath)));
       } else {
         print('No image selected.');
       }

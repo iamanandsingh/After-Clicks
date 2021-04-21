@@ -1,14 +1,14 @@
-import 'package:after_clicks/pervez/utils/scheduleSG.dart';
+import 'package:after_clicks/pervez/utils/ScheduleSG.dart';
 
-List<scheduleSG> mScheduleListObj = [];
+List<ScheduleSG> mScheduleListObj = [];
 
-class scheduleListManager{
+class ScheduleListManager{
 
-  void addDatatoList(scheduleSG mScheduleSG){
+  void addDatatoList(ScheduleSG mScheduleSG){
      mScheduleListObj.add(mScheduleSG);
      // Sorting
      mScheduleListObj.sort((a, b) => a.timeDiff.compareTo(b.timeDiff));
   }
 }
 
-scheduleListManager mScheduleListManagerObj = scheduleListManager();
+ScheduleListManager mScheduleListManagerObj = ScheduleListManager();

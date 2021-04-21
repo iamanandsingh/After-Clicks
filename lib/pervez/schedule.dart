@@ -1,13 +1,12 @@
-import 'package:after_clicks/pages/SchedulePage.dart';
 import 'package:after_clicks/pervez/utils/notificationPlugin.dart';
 import 'package:after_clicks/pervez/utils/scheduleListManager.dart';
-import 'package:after_clicks/pervez/utils/scheduleSG.dart';
+import 'package:after_clicks/pervez/utils/ScheduleSG.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:intl/intl.dart';
 import 'package:after_clicks/utils/routes.dart';
 
-class scheduleP extends StatefulWidget {
+class ScheduleP extends StatefulWidget {
 
   final String _caption;
   final String _hashtags;
@@ -15,13 +14,13 @@ class scheduleP extends StatefulWidget {
   final TimeOfDay _timeOfDay;
   final File _image;
   final String _imagePath;
-  scheduleP(this._caption, this._hashtags, this._dateTime, this._timeOfDay, this._image, this._imagePath);
+  ScheduleP(this._caption, this._hashtags, this._dateTime, this._timeOfDay, this._image, this._imagePath);
 
   @override
-  _schedulePState createState() => _schedulePState(_caption,_hashtags,_dateTime,_timeOfDay,_image,_imagePath);
+  _SchedulePState createState() => _SchedulePState(_caption,_hashtags,_dateTime,_timeOfDay,_image,_imagePath);
 }
 
-class _schedulePState extends State<scheduleP> {
+class _SchedulePState extends State<ScheduleP> {
 
   String _captionF;
   String _hashtagF;
@@ -32,7 +31,7 @@ class _schedulePState extends State<scheduleP> {
   var _timeDiff;
   var _completeTime;
 
-  _schedulePState(this._captionF, this._hashtagF,this._dateTimeF,this._timeOfDayF, this._imageF, this._imagePathF){
+  _SchedulePState(this._captionF, this._hashtagF,this._dateTimeF,this._timeOfDayF, this._imageF, this._imagePathF){
     _completeTime = new DateTime(_dateTimeF.year, _dateTimeF.month, _dateTimeF.day,
         _timeOfDayF.hour, _timeOfDayF.minute);
     _timeDiff = _completeTime.difference(DateTime.now()).inSeconds;
@@ -125,7 +124,7 @@ class _schedulePState extends State<scheduleP> {
           onPressed: () async{
             int _count = await mNotificationPlugin.getPendingNotificationCount();
             await mNotificationPlugin.scheduleNotification(_timeDiff, _captionF);
-            scheduleSG mScheduleSG = scheduleSG(_count, _captionF, _hashtagF, _dateTimeF, _timeOfDayF, _imageF, _imagePathF, _timeDiff, _completeTime);
+            ScheduleSG mScheduleSG = ScheduleSG(_count, _captionF, _hashtagF, _dateTimeF, _timeOfDayF, _imageF, _imagePathF, _timeDiff, _completeTime);
             mScheduleListManagerObj.addDatatoList(mScheduleSG);
             Navigator.pushNamed(context, MyRoutes.homeRoute);
           },
