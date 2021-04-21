@@ -23,7 +23,9 @@ class _PredefinedPageState extends State<PredefinedPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         body: ImageListWidget(imageFiles: imageFiles),
-        floatingActionButton: FloatingActionButton(onPressed: onClickedButton,),
+        floatingActionButton: FloatingActionButton(
+          onPressed: onClickedButton,
+        ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       );
 
@@ -57,7 +59,7 @@ class _PredefinedPageState extends State<PredefinedPage> {
 
   AndroidUiSettings androidUiSettingsLocked() => AndroidUiSettings(
         toolbarTitle: 'Crop Image',
-        // toolbarColor: Colors.red,
+        toolbarColor: Colors.teal,
         toolbarWidgetColor: Colors.white,
         initAspectRatio: CropAspectRatioPreset.original,
         lockAspectRatio: false,
