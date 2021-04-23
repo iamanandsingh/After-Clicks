@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
    <application
-        android:label="after_clicks"
+        android:label="After Clicks"
         android:icon="@mipmap/ic_launcher">
         
         <activity
