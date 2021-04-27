@@ -33,7 +33,7 @@ class _SchedulePageState extends State<SchedulePage> {
         _imagePath = pickedFile.path; //
         _image = File(pickedFile.path);
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => hashAndCap(_image, _imagePath)));
+            MaterialPageRoute(builder: (context) => HashAndCap(_image, _imagePath)));
       } else {
         print('No image selected.');
       }
@@ -157,7 +157,6 @@ class _SchedulePageState extends State<SchedulePage> {
             ),
           ),
           icon: const Icon(Icons.add_a_photo_rounded),
-          backgroundColor: Colors.black,
         ),
       ),
     );

@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-class scheduleSG {
+class ScheduleSG {
 
   int id;
   String caption;
@@ -16,7 +16,7 @@ class scheduleSG {
   var completeTime;
 
 
-  scheduleSG(int _id, String _caption, String _hash, DateTime _date, TimeOfDay _time, File _image, String _imagePath,var _timeDiff, var _completeTime){
+  ScheduleSG(int _id, String _caption, String _hash, DateTime _date, TimeOfDay _time, File _image, String _imagePath,var _timeDiff, var _completeTime){
     this.id = _id;
     this.caption = _caption;
     this.hash = _hash;
