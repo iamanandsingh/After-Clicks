@@ -9,7 +9,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:image/image.dart' as img;
 import 'package:photofilters/photofilters.dart';
 import 'dart:typed_data';
-
 import 'package:screenshot/screenshot.dart';
 
 class FilterImagePage extends StatefulWidget {
@@ -73,12 +72,10 @@ class _FilterImagePageState extends State<FilterImagePage> {
             onPressed: () {
               _imageFile = null;
               screenshotController.capture().then((Uint8List image) async {
-                //print("Capture Done");
                 setState(() {
                   _imageFile = image;
                 });
-                await ImageGallerySaver.saveImage(
-                    image); // Save image to gallery
+                await ImageGallerySaver.saveImage(image); // Save image to gallery
                 print("File Saved to Gallery");
               }).catchError((onError) {
                 print(onError);
@@ -92,15 +89,32 @@ class _FilterImagePageState extends State<FilterImagePage> {
           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             image == null
-                ? ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      // minimumSize: Size(100, 150),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(30.0),
+                ? //ElevatedButton(
+                //     style: ElevatedButton.styleFrom(
+                //       // minimumSize: Size(100, 150),
+                //       shape: RoundedRectangleBorder(
+                //         borderRadius: new BorderRadius.circular(30.0),
+                //       ),
+                //     ),
+                //     onPressed: pickImage,
+                //     child: Text("Add Image"),
+                //   )
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: SizedBox(
+                      height: 55.0,
+                      width: 400.0,
+                      child: FloatingActionButton.extended(
+                        onPressed: pickImage,
+                        label: Text(
+                          'Add Image',
+                          style: TextStyle(
+                              fontSize: 15.0
+                          ),
+                        ),
+                        icon: const Icon(Icons.add_a_photo_rounded),
                       ),
                     ),
-                    onPressed: pickImage,
-                    child: Text("Add Image"),
                   )
                 : Column(
                     children: [

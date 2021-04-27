@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'PredefinedPage.dart';
 import 'SquarePage.dart';
 
@@ -46,7 +45,7 @@ class _EditPageState extends State<EditPage>
       );
 
   Widget buildBottomBar() {
-    final style = TextStyle(color: Theme.of(context).accentColor);
+    //final style = TextStyle(color: Theme.of(context).accentColor);
 
     return BottomNavigationBar(
       selectedItemColor: Colors.black,
@@ -57,7 +56,7 @@ class _EditPageState extends State<EditPage>
           label: 'Square',
         ),
         BottomNavigationBarItem(
-          icon: Text('Cropper', style: style),
+          icon: Text('Cropper', style: TextStyle(color: Colors.white)),
           label: 'Predefined',
         ),
       ],

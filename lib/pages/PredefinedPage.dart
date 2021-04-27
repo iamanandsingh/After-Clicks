@@ -24,6 +24,7 @@ class _PredefinedPageState extends State<PredefinedPage> {
   Widget build(BuildContext context) => Scaffold(
         body: ImageListWidget(imageFiles: imageFiles),
         floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add_a_photo_rounded),
           onPressed: onClickedButton,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

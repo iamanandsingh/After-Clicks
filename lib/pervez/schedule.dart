@@ -1,4 +1,3 @@
-import 'package:after_clicks/pages/SchedulePage.dart';
 import 'package:after_clicks/pervez/utils/notificationPlugin.dart';
 import 'package:after_clicks/pervez/utils/scheduleListManager.dart';
 import 'package:after_clicks/pervez/utils/scheduleSG.dart';
@@ -65,7 +64,7 @@ class _SchedulePState extends State<ScheduleP> {
           color: Colors.black
       ),
       title: Text(
-        'Schedule',
+        'Preview',
         style: TextStyle(
             color: Colors.black
         ),
@@ -129,7 +128,8 @@ class _SchedulePState extends State<ScheduleP> {
             await mNotificationPlugin.scheduleNotification(_timeDiff, _captionF);
             ScheduleSG mScheduleSG = ScheduleSG(_count, _captionF, _hashtagF, _dateTimeF, _timeOfDayF, _imageF, _imagePathF, _timeDiff, _completeTime);
             mScheduleListManagerObj.addDatatoList(mScheduleSG);
-            Navigator.pushNamed(context, MyRoutes.homeRoute);
+            Navigator.popUntil(context, ModalRoute.withName('/schedule'));
+            Navigator.pop(context);
           },
           child: const Icon(Icons.check),
         ),
