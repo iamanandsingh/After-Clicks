@@ -51,7 +51,8 @@ class _HashAndCapState extends State<HashAndCap> {
   }
 
   Widget _middle(){
-    return Padding(
+    return SingleChildScrollView(
+    child: Padding(
       padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +89,7 @@ class _HashAndCapState extends State<HashAndCap> {
                   ),
                   onPressed: (){
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SelectHash()), ).then((value) => setState(() {}));
+                      MaterialPageRoute(builder: (context) => SelectHash()), ).then((value) => setState(() {}));
 
                   },
                 )
@@ -100,7 +101,7 @@ class _HashAndCapState extends State<HashAndCap> {
               border: Border(
                   bottom: BorderSide(color: Colors.blueGrey[100])
               ),
-          ),
+            ),
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 10.0),
               child: Text(
@@ -113,6 +114,7 @@ class _HashAndCapState extends State<HashAndCap> {
           ),
         ],
       ),
+    ),
     );
   }
 

@@ -74,44 +74,46 @@ class _SchedulePState extends State<ScheduleP> {
   }
 
   Widget _middleP(){
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Center(
-          child: Container(
-            child: Image.file(_imageF),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Center(
+            child: Container(
+              child: Image.file(_imageF),
+            ),
           ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-              border: Border(
-                  bottom: BorderSide(color: Colors.blueGrey[100])
-              )
-          ),
-          child: Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Text(
-              _captionF != null ? "$_captionF \n\n $_hashtagF" : "$_hashtagF",
-              style: TextStyle(
-                fontSize: 15.0,
-                color: Colors.black,
+          Container(
+            decoration: BoxDecoration(
+                border: Border(
+                    bottom: BorderSide(color: Colors.blueGrey[100])
+                )
+            ),
+            child: Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Text(
+                _captionF != null ? "$_captionF \n\n $_hashtagF" : "$_hashtagF",
+                style: TextStyle(
+                  fontSize: 15.0,
+                  color: Colors.black,
+                ),
               ),
             ),
           ),
-        ),
-        Container(
-          child: Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Text(
-              "${DateFormat('MMMM').format(_dateTimeF)} ${_dateTimeF.day}, ${_dateTimeF.year}, at ${_timeOfDayF.hour}:${_timeOfDayF.minute}",
-              style: TextStyle(
-                fontSize: 20.0,
-                color: Colors.black,
+          Container(
+            child: Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Text(
+                "${DateFormat('MMMM').format(_dateTimeF)} ${_dateTimeF.day}, ${_dateTimeF.year}, at ${_timeOfDayF.hour}:${_timeOfDayF.minute}",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.black,
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 

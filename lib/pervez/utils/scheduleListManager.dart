@@ -8,7 +8,7 @@ class ScheduleListManager{
      mScheduleListObj.add(mScheduleSG);
      // Sorting
      mScheduleListObj.sort((a, b) => a.timeDiff.compareTo(b.timeDiff));
-     print(mScheduleListObj.toString());
+     //print(mScheduleListObj.toString());
   }
 }
 
