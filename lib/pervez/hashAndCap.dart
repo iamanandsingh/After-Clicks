@@ -36,15 +36,10 @@ class _HashAndCapState extends State<HashAndCap> {
 
   Widget _topP(){
     return AppBar(
-      backgroundColor: Colors.white,
       iconTheme: IconThemeData(
-          color: Colors.black
       ),
       title: Text(
         'New Post',
-        style: TextStyle(
-            color: Colors.black
-        ),
       ),
       elevation: 0.0,
     );
@@ -84,7 +79,6 @@ class _HashAndCapState extends State<HashAndCap> {
                     'Add Hashtags',
                     style: TextStyle(
                         fontSize: 20,
-                        color: Colors.black
                     ),
                   ),
                   onPressed: (){
@@ -134,7 +128,6 @@ class _HashAndCapState extends State<HashAndCap> {
                 'Schedule',
                 style: TextStyle(
                     fontSize: 20.0,
-                    color: Colors.black
                 ),
               ),
               onPressed: (){

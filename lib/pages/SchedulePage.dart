@@ -62,14 +62,11 @@ class _SchedulePageState extends State<SchedulePage> {
 
   Widget _topP(){
     return AppBar(
-      backgroundColor: Colors.white,
       iconTheme: IconThemeData(
-          color: Colors.black
       ),
       title: Text(
         'Schedule',
         style: TextStyle(
-            color: Colors.black
         ),
       ),
     );
@@ -105,7 +102,6 @@ class _SchedulePageState extends State<SchedulePage> {
                             mScheduleListObj[index].caption,
                             style: TextStyle(
                               fontSize: 20.0,
-                              color: Colors.grey[900],
                             ),
                           ),
                         ],

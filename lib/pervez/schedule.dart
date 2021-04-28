@@ -59,14 +59,11 @@ class _SchedulePState extends State<ScheduleP> {
 
   Widget _topP(){
     return AppBar(
-      backgroundColor: Colors.white,
       iconTheme: IconThemeData(
-          color: Colors.black
       ),
       title: Text(
         'Preview',
         style: TextStyle(
-            color: Colors.black
         ),
       ),
     );
@@ -94,7 +91,6 @@ class _SchedulePState extends State<ScheduleP> {
                 _captionF != null ? "$_captionF \n\n $_hashtagF" : "$_hashtagF",
                 style: TextStyle(
                   fontSize: 15.0,
-                  color: Colors.black,
                 ),
               ),
             ),
@@ -106,7 +102,6 @@ class _SchedulePState extends State<ScheduleP> {
                 "${DateFormat('MMMM').format(_dateTimeF)} ${_dateTimeF.day}, ${_dateTimeF.year}, at ${_timeOfDayF.hour}:${_timeOfDayF.minute}",
                 style: TextStyle(
                   fontSize: 20.0,
-                  color: Colors.black,
                 ),
               ),
             ),

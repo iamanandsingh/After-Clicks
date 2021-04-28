@@ -34,14 +34,11 @@ class _SelectHashState extends State<SelectHash> {
 
   Widget _topP(){
     return AppBar(
-      backgroundColor: Colors.white,
       iconTheme: IconThemeData(
-          color: Colors.black
       ),
       title: Text(
         'Hashtags',
         style: TextStyle(
-            color: Colors.black
         ),
       ),
       elevation: 0.0,
@@ -66,7 +63,6 @@ class _SelectHashState extends State<SelectHash> {
                     hashtags[index].hashTitle,
                     style: TextStyle(
                       fontSize: 20.0,
-                      color: Colors.grey[900],
                     ),
                   ),
                   SizedBox(height: 5.0,),
@@ -74,7 +70,6 @@ class _SelectHashState extends State<SelectHash> {
                     hashtags[index].hashList,
                     style: TextStyle(
                         fontSize: 15.0,
-                        color: Colors.grey[800]
                     ),
                   )
                 ],
